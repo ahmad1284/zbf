@@ -2,31 +2,148 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hosting</title>
+    <title>Zanzibar Book Fair | 2025</title>
     <style>
-        html, body {
+        /* Reset defaults */
+        * {
+            margin: 0;
             padding: 0;
-            /*margin: 0;*/
-            /*height: 100%;*/
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
         }
 
         body {
-            font-family: monospace;
-            font-size: 50px;
-            background-color: aqua;
-            color: darkblue;
-
-            margin-left: 20%;
-            margin-right: 20%;
-            margin-top:20%;
-            width: 60%;
+            font-family: 'Georgia', serif;
+            background-color: #f4e4bc; /* Warm parchment color */
+            color: #2c1810; /* Dark brown */
+            
+            /* Flex container setup */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            background-image: 
+                linear-gradient(45deg, #e8d5a9 25%, transparent 25%),
+                linear-gradient(-45deg, #e8d5a9 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #e8d5a9 75%),
+                linear-gradient(-45deg, transparent 75%, #e8d5a9 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
         }
 
+        main {
+            background-color: #fff8e7;
+            padding: 4rem;
+            border: 5px double #8b4513;
+            border-radius: 2px;
+            width: 90%; /* Much wider now */
+            max-width: 1200px; /* Maximum width for very large screens */
+            min-height: 80vh; /* Takes up most of the viewport height */
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 6vw, 4.5rem);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: #8b4513;
+            font-family: 'Georgia', serif;
+        }
+
+        time {
+            font-size: clamp(1.2rem, 4vw, 2rem);
+            display: block;
+            text-align: center;
+            font-style: italic;
+            color: #5c3317;
+            margin-bottom: 2rem;
+        }
+
+        .teaser {
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            line-height: 1.6;
+            color: #5c3317;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Mobile Styles */
+        @media screen and (max-width: 480px) {
+            body {
+                padding: 2rem 0.5rem; /* More top/bottom padding, less on sides */
+                background-size: 10px 10px;
+                min-height: 100vh;
+            }
+
+            main {
+                padding: 2rem;
+                border-width: 3px;
+                width: 95%; /* Wide like desktop */
+                min-height: 90vh; /* Slightly less than viewport height for margins */
+                gap: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 8vw, 3rem);
+                margin-bottom: 1rem;
+            }
+
+            time {
+                font-size: clamp(1.5rem, 5vw, 2rem);
+                margin: 1rem 0;
+            }
+
+            .teaser {
+                font-size: clamp(1.2rem, 4vw, 1.6rem);
+                line-height: 1.6;
+                padding: 0 1rem;
+            }
+        }
+
+        /* Tablet Styles */
+        @media screen and (min-width: 481px) and (max-width: 768px) {
+            main {
+                padding: 3rem;
+                width: 92%;
+                min-height: 82vh;
+            }
+
+            h1 {
+                font-size: clamp(1.3rem, 4.5vw, 2.5rem);
+            }
+        }
+
+        /* Landscape Mode */
+        @media screen and (max-height: 480px) {
+            body {
+                padding: 0.5rem;
+            }
+
+            main {
+                min-height: 90vh;
+                padding: 1.5rem;
+            }
+
+            h1 {
+                margin-bottom: 0.5rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>the Second Zanzibar Book Fair - 23rd of May 2025!</h1>
+    <main>
+        <h1>The Second Zanzibar Book Fair</h1>
+        <time datetime="2025-05-23">23rd of May 2025!</time>
+        <p class="teaser">Join us for an extraordinary celebration of literature, culture, and storytelling. Stay tuned for our exciting lineup of authors, workshops, and cultural events that will bring the magic of books to life.</p>
+    </main>
 </body>
 </html>
